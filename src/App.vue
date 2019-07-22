@@ -4,8 +4,10 @@
 	<!-- 使用了 mint-ui组件 -->
     <mt-header fixed title="主页"></mt-header>
     <!-- 中间 路由区域区域 -->
-	
-	<router-view></router-view>
+	<!-- 给切换页面加一个动画效果 -->
+	<transition>
+		<router-view></router-view>
+	</transition>
 
     <!-- 底部 路由区域 -->
 	<!-- 使用了MUI的组件 -->
@@ -27,8 +29,6 @@
 				<span class="mui-tab-label">搜索</span>
 			</router-link>
 		</nav>
-
-    <h1>hello world</h1>
   </div>
 
 </template>
@@ -47,5 +47,23 @@ export default {
 <style scoped>
 #app{
   padding-top: 40px;
+  /* 溢出的部分隐藏 */
+  overflow: hidden;
+}
+
+.v-enter{
+	opacity: 0;
+	transform: translateX(100%);
+	position: absolute;
+}
+.v-leave-to{
+	opacity: 0;
+	transform: translateX(-100%);
+	position: absolute;
+	
+}
+.v-enter-active,
+.v-leave-acitve{
+	transition: all 0.5s ease;
 }
 </style>
