@@ -12,6 +12,9 @@
 2.获取到的数据放到data中
 3.使用v-for循环吧数据放到每个item上
 
+##创建一个新的组件
+1.改造routlink
+
 
 ``` bash
 # install dependencies

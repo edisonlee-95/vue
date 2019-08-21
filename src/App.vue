@@ -48,6 +48,7 @@ export default {
 #app{
   padding-top: 40px;
   /* 溢出的部分隐藏 */
+  padding-bottom: 50px;
   overflow: hidden;
 }
 
